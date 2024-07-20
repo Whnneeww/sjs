@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head> 
+    <meta charset="UTF-8"> 
+    <title>URLリダイレクト</title>
+</head> 
+<body>
+    <script>
+var yt = location.hash;
+const targetChar = "#";
+const x = yt.replace(targetChar, "");
+var vz = parseInt(x, 36)
+location.href= "https://scratch.mit.edu/studios/" + vz;
+    </script>
+</body>
+</html>
