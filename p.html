@@ -6,7 +6,9 @@
 </head> 
 <body>
     <script>
-var hu = location.hash;
+var yt = location.hash;
+const targetChar = "#";
+const hu = yt.replace(targetChar, "");
 var vz =hu.toString(36);
 location.href= vz;
     </script>
