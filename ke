@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head> 
+    <meta charset="UTF-8"> 
+    <title>URLリダイレクト</title>
+</head> 
+<body>
+    <script>
+var yt = location.hash;
+const targetChar = "#";
+const x = yt.replace(targetChar, "");
+var x1 = hoge1.split('-')[0];
+var x2 = hoge1.split('-')[2];
+var vz = parseInt(x1, 36);
+var vz2 = parseInt(x2, 36);
+location.href= "https://kakuyomu.jp/works/" + vz + "/episodes/" + vz2;
+    </script>
+</body>
+</html>
