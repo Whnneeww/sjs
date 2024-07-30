@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL to Base36 Converter</title>
+</head>
+<body>
+    <h1>URL to Base36 Converter</h1>
+    <input type="text" id="urlInput" placeholder="URLを入力してください">
+    <button onclick="convertUrl()">変換</button>
+    <p id="resultOutput"></p>
+
+    <script>
+        function convertUrl() {
+            const url = document.getElementById("urlInput").value;
+            const idMatch = url.match(/\/works\/(\d+)$/);
+
+            if (idMatch) {
+                const idNumber = idMatch[1]; // IDを取得
+                const base36 = parseInt(idNumber, 10).toString(36); // 36進数に変換
+                const result = "/kw#" + base36; // 出力フォーマットに組み込む
+                document.getElementById("resultOutput").innerText = "出力: " + result;
+            } else {
+                document.getElementById("resultOutput").innerText = "無効なURLです。";
+            }
+        }
+    </script>
+</body>
+</html>
