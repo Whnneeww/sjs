@@ -1,0 +1,14 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>端末情報</title> 
+</head> 
+<body> 
+  端末のモデル番号とデバイス名: 
+  <p id="deviceInfo"> 
+  <script> 
+    const userAgent = navigator.userAgent; 
+    document.getElementById("deviceInfo").textContent = userAgent; 
+  </script> 
+</body> 
+</html> 
